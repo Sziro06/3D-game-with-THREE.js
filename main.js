@@ -1,4 +1,5 @@
-//import { OrbitControls } from "./OrbitControls.js";
+import * as THREE from './three.js-dev';
+import { OrbitControls } from './three.js-dev/examples/jsm/controls/OrbitControls.js';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -13,7 +14,7 @@ document.body.appendChild( renderer.domElement );
 
 
 
-//const controls = new OrbitControls(camera, renderer.domElement);
+const controls = new OrbitControls(camera, renderer.domElement);
 
 
 
@@ -37,7 +38,7 @@ scene.add( player );
 function animate() {
 	requestAnimationFrame( animate );
 
-//	controls.update();
+	controls.update();
 
 	renderer.render( scene, camera );
 }
