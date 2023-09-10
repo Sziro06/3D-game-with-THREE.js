@@ -4,14 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "start": "webpack-dev-server --open"
   },
   "devDependencies": {
-    "vite": "^4.4.5"
+    "vite": "^4.4.9"
   },
   "dependencies": {
-    "three": "^0.156.1"
+    "three": "^0.156.1",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }
