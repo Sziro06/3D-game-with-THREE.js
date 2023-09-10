@@ -59,4 +59,10 @@ window.addEventListener("keydown",(e) => {
 	if(e.key === 'a' || e.key === 'A' || e.key === 'ArrowLeft') {
 		player.position.x -= 0.1;
 	}
+	if(e.key === 'w' || e.key === 'W' || e.key === 'ArrowUp') {
+		player.position.z -= 0.1;
+	}
+	if(e.key === 's' || e.key === 'S' || e.key === 'ArrowDown') {
+		player.position.z += 0.1;
+	}
   })
