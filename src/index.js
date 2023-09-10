@@ -1,6 +1,17 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
+
+
+const pointsUI = document.querySelector("#points");
+let points = 0;
+
+const randomRangeNum = (max,min)=>{
+	return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 camera.position.z = 4.5;
@@ -31,6 +42,24 @@ const player = new THREE.Mesh(
 	new THREE.MeshBasicMaterial( { color: 0xff0000} )
 );
 scene.add( player );
+
+
+const powerups = []
+for(let i = 0; i < 10; i++) {
+	const powerup = new THREE.Mesh(
+		new THREE.TorusGeometry( 1, 0.4, 16, 50),
+		new THREE.MeshBasicMaterial({ color: 0xffff00 })
+	);
+	powerup.scale.set( 0.1, 0.1, 0.1 )
+	powerup.name = "powerup" + i + 1
+	powerup.position.x = i+2
+	powerups.push(powerup);
+	scene.add( powerup );
+}
+
+
+const gridHelper = new THREE.GridHelper( 30, 30 );
+scene.add( gridHelper)
 
 
 

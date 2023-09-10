@@ -5,8 +5,29 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cubeMaster</title>
+
+    <style>
+      body{
+        margin: 0;
+      }
+
+      #ui{
+        margin: 0;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+      }
+
+      h1{
+        color: whitesmoke;
+      }
+    </style>
+    
   </head>
   <body>
+    <div id="ui">
+      <h1>Points: <span id="pointsUI">00</span></h1>
+    </div>
     <script type="module" src="main.js"></script>
   </body>
 </html>
